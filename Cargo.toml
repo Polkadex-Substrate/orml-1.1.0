@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+members = [
+    "tokens",
+    "traits",
+    "utilities",
+    "vesting",
+    "xcm",
+    "xtokens"
+]
