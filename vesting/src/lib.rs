@@ -52,7 +52,7 @@ mod weights;
 pub use module::*;
 pub use weights::WeightInfo;
 use frame_system::pallet_prelude::BlockNumberFor;
-
+use sp_std::vec;
 pub const VESTING_LOCK_ID: LockIdentifier = *b"ormlvest";
 
 /// The vesting schedule.
