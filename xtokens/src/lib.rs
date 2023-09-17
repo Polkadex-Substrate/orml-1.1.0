@@ -51,6 +51,7 @@ use xcm::{
 	VersionedMultiAsset, VersionedMultiAssets, VersionedMultiLocation,
 };
 use xcm_executor::traits::WeightBounds;
+use sp_std::vec;
 
 pub use module::*;
 use orml_traits::{

@@ -73,6 +73,7 @@ use orml_traits::{
 	BalanceStatus, GetByKey, Happened, LockIdentifier, MultiCurrency, MultiCurrencyExtended, MultiLockableCurrency,
 	MultiReservableCurrency, NamedMultiReservableCurrency,
 };
+use sp_std::vec;
 
 mod imbalances;
 mod impls;
