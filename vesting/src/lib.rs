@@ -194,7 +194,7 @@ pub mod module {
 		pub vesting: Vec<ScheduledItem<T>>,
 	}
 
-	#[cfg(feature = "std")]
+
 	impl<T: Config> Default for GenesisConfig<T> {
 		fn default() -> Self {
 			GenesisConfig { vesting: vec![] }

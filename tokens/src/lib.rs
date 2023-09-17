@@ -417,7 +417,6 @@ pub mod module {
 		pub balances: Vec<(T::AccountId, T::CurrencyId, T::Balance)>,
 	}
 
-	#[cfg(feature = "std")]
 	impl<T: Config> Default for GenesisConfig<T> {
 		fn default() -> Self {
 			GenesisConfig { balances: vec![] }
