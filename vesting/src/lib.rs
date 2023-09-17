@@ -51,7 +51,6 @@ mod weights;
 
 pub use module::*;
 pub use weights::WeightInfo;
-use frame_support::traits::GenesisBuild;
 use frame_system::pallet_prelude::BlockNumberFor;
 
 pub const VESTING_LOCK_ID: LockIdentifier = *b"ormlvest";
@@ -203,7 +202,7 @@ pub mod module {
 	}
 
 	#[pallet::genesis_build]
-	impl<T: Config> GenesisBuild<T> for GenesisConfig<T> {
+	impl<T: Config> BuildGenesisConfig for GenesisConfig<T> {
 		fn build(&self) {
 			self.vesting
 				.iter()

@@ -67,7 +67,6 @@ use sp_runtime::{
 	ArithmeticError, DispatchError, DispatchResult, FixedPointOperand, RuntimeDebug, TokenError,
 };
 use sp_std::{cmp, convert::Infallible, marker, prelude::*, vec::Vec};
-use frame_support::traits::GenesisBuild;
 use orml_traits::{
 	arithmetic::{self, Signed},
 	currency::{MutationHooks, OnDeposit, OnDust, OnSlash, OnTransfer, TransferAll},
@@ -426,7 +425,7 @@ pub mod module {
 	}
 
 	#[pallet::genesis_build]
-	impl<T: Config> GenesisBuild<T> for GenesisConfig<T> {
+	impl<T: Config> BuildGenesisConfig for GenesisConfig<T> {
 		fn build(&self) {
 			// ensure no duplicates exist.
 			let unique_endowed_accounts = self
