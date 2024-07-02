@@ -8,3 +8,6 @@ members = [
     "xcm",
     "xtokens"
 ]
+
+[patch.'https://github.com/w3f/ring-vrf']
+bandersnatch_vrfs = { git = "https://github.com/w3f//ring-vrf.git", rev = "3ebdd261873da05124f4499c85a8e62d40411620"}
